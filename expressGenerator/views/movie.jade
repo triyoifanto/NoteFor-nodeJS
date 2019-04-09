@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    .wrap
+        .profile.hide(style='background-image: url(' + bgImage + ');')
+            a(href='#').menu
+                span Movies
+                +icon('menu')
+            .movies 
+                include ./_movies.jade
+        .information
+            h1.information__name 
+                small=firstname
+                #{lastname}
+            p.information__description=content
+            .breadcrumb
+                ul
+                    li
+                        a(href="0") Charles Chaplin
+                        a(href="1") Marilyn Monroe
+                        a(href="2") Jean Simmons

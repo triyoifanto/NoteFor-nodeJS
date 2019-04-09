@@ -1,7 +1,11 @@
+include  ./_icons.jade
 doctype html
 html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
-  body
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+  body    
     block content
+
+  script(src='/javascripts/script.js')
