@@ -2,7 +2,8 @@
 Sample project using node js express and mongodb
 
 ## Prerequisites
-already have nodejs
+already have nodejs installed
+
 install express and mongo
 ```
 npm install --save express mongoose
