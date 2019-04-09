@@ -3,6 +3,10 @@ Sample project using node js express and mongodb
 
 ## Prerequisites
 already have nodejs installed
+<<<<<<< HEAD
+=======
+
+>>>>>>> a0a3172c749df898c388fedd291c4fc03b95f7a5
 install express and mongo
 ```
 npm install --save express mongoose
@@ -12,6 +16,8 @@ npm install --save express mongoose
 in this repository there is 2 app
 - simple app using jade view engine
 - API app using mongo
+
+run bellow command:
 
 ```
 npm init
@@ -24,7 +30,7 @@ npm install express-generator -g
 express myapp
 npm install
 ```
-### express using jade view engine
+### 1. express using jade view engine
 about movie web app the design will be looks like this
 ![](./CaptureWebApp.jpg)
 with this app we learn about express, express generator, routing in express, static files and middleware, template and template engines, querystring.
