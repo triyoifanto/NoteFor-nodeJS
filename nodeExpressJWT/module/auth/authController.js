@@ -13,7 +13,7 @@ const RegisterUser = (req, res) => {
         // if user is registered without errors
         // create a token
         let token = jwt.sign(
-            { id: user._id }, 
+            { id: user._id }, // payload
             config.secret,
             { expiresIn: 86400 }//expires in 24 hours
         );
@@ -35,7 +35,7 @@ Login = (req, res) => {
         let token = jwt.sign(
             { id: user._id }, 
             config.secret,
-            { expiresIn: 86400 }//expires in 24 hours
+            { expiresIn: 60 }//expires in 1 minutes
         );
 
         // return the information including token as JSON
