@@ -32,3 +32,6 @@ about movie web app the design will be looks like this
 ![](./CaptureWebApp.jpg)
 with this app we learn about express, express generator, routing in express, static files and middleware, template and template engines, querystring.
 ### express for API
+sample get request result
+![](./CaptureWebApp.jpg)
+with this we learn how to create web api using node express and connecting to mongodb.
