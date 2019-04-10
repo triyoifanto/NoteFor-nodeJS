@@ -1,11 +1,17 @@
-var createError = require('http-errors');
-var express = require('express');
+var createError = require('./node_modules/http-errors');
+var express = require('./node_modules/express');
 var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+var cookieParser = require('./node_modules/cookie-parser');
+var logger = require('./node_modules/morgan');
+
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://127.0.0.1/expressSample_Book');
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MONGODB con error'));
 
 var indexRouter = require('./routes/index');
 var movieRouter = require('./routes/movie');
+var booksRouter = require('./routes/books');
 var usersRouter = require('./routes/users');
 
 var app = express();
@@ -22,8 +28,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/movie', movieRouter);
+app.use('/api/books', booksRouter);
 app.use('/users', usersRouter);
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
